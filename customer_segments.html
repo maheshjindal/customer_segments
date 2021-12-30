@@ -13092,7 +13092,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -13144,13 +13144,13 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fd092e0ee90&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f92c36c3fd0&gt;</pre>
 </div>
 
 </div>
@@ -13177,7 +13177,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Exploration">Data Exploration<a class="anchor-link" href="#Data-Exploration">&#182;</a></h2><p>We tend to exploring the data through visualizations and code to understand how each feature is related to the others. We want to observe a statistical description of the dataset, consider the relevance of each feature, and select a few sample data points from the dataset which you will track through the course of this project.</p>
+<h2 id="Data-Exploration">Data Exploration<a class="anchor-link" href="#Data-Exploration">&#182;</a></h2><p>We tend to exploring the data through visualizations and code to understand how each feature is related to the others. We want to observe a statistical description of the dataset, consider the relevance of each feature, and select a few sample data points from the dataset.</p>
 
 </div>
 </div>
@@ -13319,7 +13319,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Selecting-Samples">Selecting Samples<a class="anchor-link" href="#Selecting-Samples">&#182;</a></h3><p>To get a better understanding of the customers and how their data will transform through the analysis, it would be best to select a few sample data points and explore them in more detail. In the code block below, add <strong>three</strong> indices of your choice to the <code>indices</code> list which will represent the customers to track. It is suggested to try different sets of samples until you obtain customers that vary significantly from one another.</p>
+<h3 id="Selecting-Samples">Selecting Samples<a class="anchor-link" href="#Selecting-Samples">&#182;</a></h3><p>To get a better understanding of the customers and how their data will transform through the analysis, it would be best to select a few sample data points and explore them in more detail.</p>
 
 </div>
 </div>
@@ -13329,7 +13329,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Selecting a few samples </span>
 <span class="n">indices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">29</span><span class="p">,</span><span class="mi">245</span><span class="p">,</span><span class="mi">378</span><span class="p">]</span>
 
 <span class="c1"># Create a DataFrame of the chosen samples</span>
@@ -13512,7 +13512,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Visualize-Feature-Distributions">Visualize Feature Distributions<a class="anchor-link" href="#Visualize-Feature-Distributions">&#182;</a></h3><p>To get a better understanding of the dataset, we can construct a scatter matrix of each of the six product features present in the data. If the feature you attempted to predict above is relevant for identifying a specific customer, then the scatter matrix below may not show any correlation between that feature and the others. Conversely, feature is not relevant for identifying a specific customer, the scatter matrix might show a correlation between that feature and another feature in the data. Run the code block below to produce a scatter matrix.</p>
+<h3 id="Visualize-Feature-Distributions">Visualize Feature Distributions<a class="anchor-link" href="#Visualize-Feature-Distributions">&#182;</a></h3><p>To get a better understanding of the dataset, we can construct a scatter matrix of each of the six product features present in the data. If the feature we attempted to predict above is relevant for identifying a specific customer, then the scatter matrix below may not show any correlation between that feature and the others. Conversely, feature is not relevant for identifying a specific customer, the scatter matrix might show a correlation between that feature and another feature in the data. Run the code block below to produce a scatter matrix.</p>
 
 </div>
 </div>
@@ -13614,8 +13614,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Preprocessing">Data Preprocessing<a class="anchor-link" href="#Data-Preprocessing">&#182;</a></h2><p>In this section, you will preprocess the data to create a better representation of customers by performing a scaling on the data and detecting (and optionally removing) outliers. Preprocessing data is often times a critical step in assuring that results you obtain from your analysis are significant and meaningful.</p>
-
+<h2 id="Data-Preprocessing">Data Preprocessing<a class="anchor-link" href="#Data-Preprocessing">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13664,8 +13663,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Observation">Observation<a class="anchor-link" href="#Observation">&#182;</a></h3><p>After applying a natural logarithm scaling to the data, the distribution of each feature should appear much more normal. For any pairs of features you may have identified earlier as being correlated, observe here whether that correlation is still present (and whether it is now stronger or weaker than before).</p>
-<p>Run the code below to see how the sample data has changed after having the natural logarithm applied to it.</p>
+<h3 id="Observation">Observation<a class="anchor-link" href="#Observation">&#182;</a></h3><p>After applying a natural logarithm scaling to the data, the distribution of each feature should appear much more normal. For any pairs of features identified earlier as being correlated, we will observe here whether that correlation is still present (and whether it is now stronger or weaker than before).</p>
 
 </div>
 </div>
@@ -14599,7 +14597,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Implementation:-PCA">Implementation: PCA<a class="anchor-link" href="#Implementation:-PCA">&#182;</a></h3><p>Now that the data has been scaled to a more normal distribution and has had any necessary outliers removed, we can now apply PCA to the <code>good_data</code> to discover which dimensions about the data best maximize the variance of features involved. In addition to finding these dimensions, PCA will also report the <em>explained variance ratio</em> of each dimension — how much variance within the data is explained by that dimension alone. Note that a component (dimension) from PCA can be considered a new "feature" of the space, however it is a composition of the original features present in the data.</p>
+<h3 id="PCA">PCA<a class="anchor-link" href="#PCA">&#182;</a></h3><p>Now that the data has been scaled to a more normal distribution and has had any necessary outliers removed, we can now apply PCA to the <code>good_data</code> to discover which dimensions about the data best maximize the variance of features involved. In addition to finding these dimensions, PCA will also report the <em>explained variance ratio</em> of each dimension — how much variance within the data is explained by that dimension alone. Note that a component (dimension) from PCA can be considered a new "feature" of the space, however it is a composition of the original features present in the data.</p>
 
 </div>
 </div>
@@ -14943,7 +14941,7 @@ The variance of first four components is 0.9310901099509612
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Clustering">Clustering<a class="anchor-link" href="#Clustering">&#182;</a></h2><p>In this section, you will choose to use either a K-Means clustering algorithm or a Gaussian Mixture Model clustering algorithm to identify the various customer segments hidden in the data. You will then recover specific data points from the clusters to understand their significance by transforming them back into their original dimension and scale.</p>
+<h2 id="Clustering">Clustering<a class="anchor-link" href="#Clustering">&#182;</a></h2><p>We will choose to use either a K-Means clustering algorithm or a Gaussian Mixture Model clustering algorithm to identify the various customer segments hidden in the data. We will then recover specific data points from the clusters to understand their significance by transforming them back into their original dimension and scale.</p>
 
 </div>
 </div>
@@ -14964,8 +14962,7 @@ The variance of first four components is 0.9310901099509612
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Creating-Clusters">Creating Clusters<a class="anchor-link" href="#Creating-Clusters">&#182;</a></h3><p>Depending on the problem, the number of clusters that you expect to be in the data may already be known. When the number of clusters is not known <em>a priori</em>, there is no guarantee that a given number of clusters best segments the data, since it is unclear what structure exists in the data — if any. However, we can quantify the "goodness" of a clustering by calculating each data point's <em>silhouette coefficient</em>. The <a href="http://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html">silhouette coefficient</a> for a data point measures how similar it is to its assigned cluster from -1 (dissimilar) to 1 (similar). Calculating the <em>mean</em> silhouette coefficient provides for a simple scoring method of a given clustering.</p>
-
+<h3 id="Creating-Clusters">Creating Clusters<a class="anchor-link" href="#Creating-Clusters">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14977,7 +14974,7 @@ The variance of first four components is 0.9310901099509612
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.mixture</span> <span class="kn">import</span> <span class="n">GaussianMixture</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">silhouette_score</span>
 
-<span class="c1"># Apply your clustering algorithm of choice to the reduced data </span>
+<span class="c1"># Applying clustering algorithm of choice to the reduced data </span>
 <span class="n">clusterer</span> <span class="o">=</span> <span class="n">GaussianMixture</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">clusterer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">)</span>
 
